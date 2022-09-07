@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Baseball</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/scoreboard.css">
+        <!--Fonts, thanks google!-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="team-container">
+            <div class="select-team">
+                <button class="tablinks" onclick="chooseSidebar(event, 'awayteam')"><h1>Dodgers</h1></button>
+                <button class="tablinks" onclick="chooseSidebar(event, 'hometeam')"><h1>Mariners</h1></button>
+            </div>
+            <div class="tabcontent" id="hometeam">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SEA</th>
+                            <th>Lineup</th>
+                            <th>PA</th>
+                            <th>AB</th>
+                            <th>H</th>
+                            <th>RBI</th>
+                            <th>BB</th>
+                            <th>SO</th>
+                            <th>AVG</th>
+                            <th>OPS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-number">1</td>
+                            <td class="td-player">Rodriguez <span><em>CF</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">2</td>
+                            <td class="td-player">France <span><em>1B</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">3</td>
+                            <td class="td-player">Haniger <span><em>RF</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">4</td>
+                            <td class="td-player">Suarez <span><em>3B</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">5</td>
+                            <td class="td-player">Raleigh <span><em>C</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">6</td>
+                            <td class="td-player">Winker <span><em>LF</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">7</td>
+                            <td class="td-player">Crawford <span><em>SS</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">8</td>
+                            <td class="td-player">Haggery <span><em>DH</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                        <tr>
+                            <td class="td-number">9</td>
+                            <td class="td-player">Toro <span><em>2B</em></span></td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>.000</td>
+                            <td>.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tabcontent" id="awayteam">
+                <p>The Dodgers are okay</p>
+            </div>
+            <button onclick="autoSim()">Auto Run</button>
+            <button onclick="pitch()" class="pitch-button">Pitch</button>
+            <button onclick="resetGame()" class="reset-button">Reset Game</button>
+        </div>
+        <div class="field">
+            <div class="rubber"><div class="ball" id="ball"></div></div>
+            <!--Use onbase to signify a runner on base-->
+            <div id="firstBase" class="base base1"></div>
+            <div id="secondBase" class="base base2"></div>
+            <div id="thirdBase" class="base base3"></div>
+            <div id="home" class="base base4"></div>
+        </div>
+        <div class="statline">
+            <div class="pitcher-stats">
+                <span id="pitcherName">Gonzales</span>
+                <span class="pitch-stats">
+                    <span id="pitchCount">0</span>
+                    <span class="pitches">Pitches</span>
+                </span>
+            </div>
+            <div class="batter-stats">
+                <span id="batterName">Muncy</span>
+                <span class="batter-count">
+                    <span id="batterHits">0</span>
+                    <span>For</span>
+                    <span id="batterAB">0</span>
+                </span>
+            </div>
+        </div>
+        <div class="scoreboard">
+            <div class="team away-team-score">
+                <span class="team-name">LAD</span><span class="scores" id="awayScore">0</span>
+            </div>
+            <div class="team home-team-score">
+                <span class="team-name">SEA</span><span class="scores" id="homeScore">0</span>
+            </div>
+            <div class="quick-game-stats">
+                <span class="trans-count">
+                    <span id="realball">0</span>
+                    <span>-</span>
+                    <span id="strike">0</span>
+                </span>
+                <span class="trans-outs">
+                    <span id="out">0</span>Out
+                </span>
+            </div>
+            <!--Use onbase to signify a runner on base-->
+            <div id="scoreboardFirst" class="score-base firstbase"></div>
+            <div id="scoreboardSecond" class="score-base secondbase"></div>
+            <div id="scoreboardThird" class="score-base thirdbase"></div>
+            <div class="inning">
+                <span><span id="halfInning">Top </span><span id="inning">1</span>
+            </div>
+        </div>
+
+        <!--Good'ole javascript-->
+        <script src="js/main.js"></script>
+        <script src="js/tabs.js"></script>
+    </body>
+</html>

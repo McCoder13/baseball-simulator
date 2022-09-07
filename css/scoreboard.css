@@ -1,0 +1,138 @@
+.statline {
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    margin: 20px;
+    margin-bottom: 0px;
+    width: 450px;
+    background: #333333;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+#pitcherName {
+    font-weight: 700;
+}
+
+.pitches {
+    font-size: 11px;
+}
+
+#batterName {
+    font-weight: 700;
+}
+
+.pitcher-stats {
+    display: inline-block;
+    width: 200px;
+}
+
+.pitch-stats {
+    float: right;
+}
+
+.batter-stats {
+    padding-left: 6px;
+    display: inline-block;
+    width: 240px;
+}
+
+.batter-count {
+    float: right;
+}
+
+.scoreboard {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    width: 450px;
+    background: #333333;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 300;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.away-team-score {
+    background: #005A9C;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.team {
+    display: inline-block;
+    padding: 16px;
+}
+
+.team-name {
+    font-weight: 700;
+}
+
+.scores {
+    padding: 10px;
+}
+
+.divider {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    height: 0;
+    width: 0;
+}
+
+.home-team-score {
+    transform: translateX(-15px);
+    background: #005c5c;
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.quick-game-stats {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.quick-game-stats span {
+    padding: 5px;
+}
+
+.trans-count {
+    transform: translateX(-40px);
+}
+
+.firstbase {
+    transform: translate(405px, -45px) rotate(45deg);
+}
+
+.secondbase {
+    transform: translate(390px, -60px) rotate(45deg);
+}
+
+.thirdbase {
+    transform: translate(375px, -45px) rotate(45deg);
+}
+
+.score-base {
+    position: absolute;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+.onbase {
+    background: #ffff00;
+    box-shadow: 0px 0px 77px 0px rgba(255,255,0,0.97);
+}
+
+.inning {
+    text-align: center;
+    position: absolute;
+    transform: translate(361px, -25px);
+    font-size: 20px;
+    width: 75px;
+}

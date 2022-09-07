@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Source Sans Pro;
+    background: #1e1e1e;
+    color: #d4d4d4;
+}
+
+.team-container {
+    margin: 20px;
+    width: 390px;
+    height: 700px;
+    background: #333333;
+    border-radius: 5px;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.select-team {
+    text-align: center;
+    background: #252526;
+    border-radius: 5px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.select-team button {
+    border: 0px solid white;
+    background: transparent;
+    color: #a4a4a4;
+    width: 49%;
+    text-decoration: underline;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.select-team button:hover {
+    color: #d4d4d4;
+}
+
+.tablinks {
+    font-family: Source Sans Pro;
+}
+
+.tabcontent {
+    display: none;
+}
+
+/* Start Table Styles */
+
+table {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-collapse: collapse;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    width: 20px;
+    background: #252526;
+    border-bottom: 1px solid #a4a4a4;
+}
+
+tr span {
+    opacity: .9;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+tr:nth-child(odd) {
+    background: #252526;
+}
+
+.td-player {
+    text-align: left;
+}
+
+.td-number {
+    opacity: .9;
+}
+
+/* End Table Styles */
+
+.pitch-button {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(30px, -38px);
+    border: none;
+    padding: 20px;
+    background: #252526;
+    bottom: 0;
+    left: 0;
+    color: #d4d4d4;
+    width: 180px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: Source Sans Pro;
+    transition: all .2s ease;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pitch-button:hover {
+    background: #25252686;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.reset-button {
+    cursor: pointer;
+    position: absolute;
+    transform: translate(218px, -38px);
+    border: none;
+    padding: 20px;
+    background: #252526;
+    bottom: 0;
+    left: 0;
+    color: #d4d4d4;
+    width: 180px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: Source Sans Pro;
+    transition: all .2s ease;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+.reset-button:hover {
+    background: #25252686;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.container {
+    border: 1px solid red;
+    width: 10%;
+}
+
+.field {
+    width: 500px;
+    height: 500px;
+    background: green;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.rubber {
+    background: white;
+    height: 10px;
+    width: 50px;
+    position: absolute;
+    transform: translate(180px, 200px) rotate(-45deg);
+}
+
+.ball {
+    background: red;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(15px, 0px);
+}
+
+.pitch {
+    animation: pitch .5s;
+}
+
+.base {
+    height: 30px;
+    width: 30px;
+    background: white;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.base1 {
+    transform: translate(450px, 5px);
+}
+
+.base2 {
+    transform: translate(0px, -30px);
+}
+
+.base3 {
+    transform: translate(0px, 385px);
+}
+
+.base4 {
+    transform: translate(450px, 350px);
+    clip-path: polygon(60% 0, 100% 40%, 100% 100%, 40% 100%, 0 60%);
+}
+
+@keyframes pitch {
+    0% {
+        transform: translate(15px, 0px);
+    }
+    100% {
+        transform: translate(15px, 380px);
+    }
+}
