@@ -41,14 +41,18 @@ body {
 
 .tabcontent {
     display: none;
+}
+
+.click-the-button {
     position: absolute;
+    margin-left: 10px;
 }
 
 /* Start Table Styles */
-
 table {
+    position: absolute;
     text-align: center;
-    width: 100%;
+    width: 390px;
     padding: 10px;
     border: none;
     border-collapse: collapse;
