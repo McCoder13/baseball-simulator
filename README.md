@@ -4,3 +4,4 @@ This baseball simulator is a simple javscript application. Simple open in your b
 Play now at https://baseballsimulator.netlify.app/.
 
 Last updated 9/10/2022
+Updates at least every month
