@@ -331,7 +331,45 @@ function pitchaction(pitchType) {
 
         let selectRandomContact = randomContact[Math.floor(Math.random() * randomContact.length)];
 
-        //setTimeout(function(){alert(selectRandomContact); }, 801);
+        setTimeout(function(){alert(selectRandomContact); }, 801);
+
+        console.log(selectRandomContact);
+
+        ball = 0;
+        strike = 0;
+        document.getElementById("realball").innerHTML = ball;
+        document.getElementById("strike").innerHTML = strike;
+
+        if (selectRandomContact == "out") {
+            out++;
+            document.getElementById("out").innerHTML = out;
+
+            if (out == 3) {
+                resetCounters()
+                switchInning()
+            }
+        }
+        else if (selectRandomContact == "homerun") {
+            homerun();
+        }
+        else if (selectRandomContact == "triple") {
+            triple();
+        }
+        else if (selectRandomContact == "double") {
+            double();
+        }
+        else if (selectRandomContact == "single" || selectRandomContact == "bunt") {
+            single();
+        }
+    }
+
+    if (pitchType == "autoContact") {
+        let randomContact = ["bunt", "out", "out", "out", "out", "single", "single", "single", "out", "out", "double", "double", "out", "out", "homerun", "homerun", "out", "out", "triple"]
+
+        //let testContact = ["single"]
+        //let selectRandomContact = testContact[Math.floor(Math.random() * testContact.length)];
+
+        let selectRandomContact = randomContact[Math.floor(Math.random() * randomContact.length)];
 
         console.log(selectRandomContact);
 
@@ -390,7 +428,11 @@ function pitch() {
  }
 
  function autoSim() {
-    while (inning < 10) {
+    let inningAmount = prompt("How many innings would you like simulated?", 9);
+
+    let inningAmountConverted = Number(inningAmount);
+
+    while (inning < inningAmountConverted + 1) {
         checkRunners();
 
         let pitchElement = document.getElementById("ball");
@@ -398,7 +440,7 @@ function pitch() {
 
         setTimeout(function(){pitchElement.classList.remove("pitch"); }, 700);
 
-        let randomAction = ["ball", "strike", "contact", "foulball", "ball"]
+        let randomAction = ["ball", "strike", "autoContact", "foulball", "ball"]
 
         let selectRandomAction = randomAction[Math.floor(Math.random() * randomAction.length)];
 
