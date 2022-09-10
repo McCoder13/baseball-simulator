@@ -1,0 +1,48 @@
+.nav-container {
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    transition: all .2s;
+    background: #333333;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #d4d4d4;
+    padding: 20px;
+}
+
+.nav-container a:hover{
+    opacity: .8;
+}
+
+.version-container {
+    margin-top: 100px;
+}
+
+.version {
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;;
+    background: #333333;
+    color: #d4d4d4;
+    margin: 80px;
+    padding: 20px;
+}
+
+.version h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.version-number {
+    font-weight: 200;
+}
+
+.version span {
+    font-size: 24px;
+    margin: 20px;
+}

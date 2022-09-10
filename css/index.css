@@ -5,6 +5,24 @@ body {
     color: #d4d4d4;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    transition: all .2s;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #d4d4d4;
+    padding: 10px;
+}
+
+.navbar a:hover{
+    opacity: .8;
+}
+
 .team-container {
     margin: 20px;
     width: 390px;
