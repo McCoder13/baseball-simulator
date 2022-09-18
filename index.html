@@ -18,15 +18,15 @@
     </head>
     <body>
         <div class="navbar">
-            <a href="changelog.html">Changelog</a>
-            <a href="https://github.com/McCoder13/baseball-simulator">Source Code</a>
+            <a href="changelog.html" target="_blank" rel="noopener noreferrer">Changelog</a>
+            <a href="https://github.com/McCoder13/baseball-simulator" target="_blank" rel="noopener noreferrer">Source Code</a>
         </div>
         <div class="team-container">
             <div class="select-team">
                 <button class="tablinks" onclick="chooseSidebar(event, 'awayteam')"><h1>Dodgers</h1></button>
                 <button class="tablinks" onclick="chooseSidebar(event, 'hometeam')"><h1>Mariners</h1></button>
             </div>
-            <p class="click-the-button">Select a team</p>
+            <p class="click-the-button">Select a team to view lineup</p>
             <div class="tabcontent" id="hometeam">
                 <table>
                     <thead>
@@ -159,7 +159,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>SEA</th>
+                            <th>LAD</th>
                             <th>Lineup</th>
                             <th>PA</th>
                             <th>AB</th>
@@ -222,7 +222,7 @@
                         </tr>
                         <tr>
                             <td class="td-number">5</td>
-                            <td class="td-player">Turner <span><em>3B</em></span></td>
+                            <td class="td-player">Muncy <span><em>3B</em></span></td>
                             <td>0</td>
                             <td>0</td>
                             <td>0</td>
@@ -283,7 +283,7 @@
                     </tbody>
                 </table>
             </div>
-            <button onclick="autoSim()" class="auto-button">Auto Sim</button>
+            <button onclick="autoSim()" class="auto-button">Simulate</button>
             <button onclick="pitch()" class="pitch-button">Pitch</button>
             <button onclick="resetGame()" class="reset-button">Reset Game</button>
         </div>
@@ -297,14 +297,14 @@
         </div>
         <div class="statline">
             <div class="pitcher-stats">
-                <span id="pitcherName">Gonzales</span>
+                <span id="pitcherName">Pitch to start</span>
                 <span class="pitch-stats">
                     <span id="pitchCount">0</span>
                     <span class="pitches">Pitches</span>
                 </span>
             </div>
             <div class="batter-stats">
-                <span id="batterName">Muncy</span>
+                <span id="batterName">Pitch to start</span>
                 <span class="batter-count">
                     <span id="batterHits">0</span>
                     <span>For</span>
@@ -317,7 +317,7 @@
                 <span class="team-name">LAD</span><span class="scores" id="awayScore">0</span>
             </div>
             <div class="team home-team-score">
-                <span class="team-name">SEA</span><span class="scores" id="homeScore">0</span>
+                <span id="test" class="team-name">SEA</span><span class="scores" id="homeScore">0</span>
             </div>
             <div class="quick-game-stats">
                 <span class="trans-count">

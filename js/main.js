@@ -1,7 +1,6 @@
 var ball = 0;
 var strike = 0;
 var out = 0;
-var pitchCount = 0;
 
 var runnerFirst = false;
 var runnerSecond = false;
@@ -13,11 +12,75 @@ var awayScore = 0;
 var inning = 1;
 var halfInning = false; // false == Top -- true == bottom
 
+//Team lineup arrays
+var homePitcher = "Gonzales";
+var homePitchCount = 0;
+var homePlayerNumber = 0;
+var homePlayers = ["Rodriguez", "France", "Haniger", "Suarez", "Raleigh", "Winker", "Crawford", "Haggery", "Toro"];
+
+var awayPitcher = "Kershaw";
+var awayPitchCount = 0;
+var awayPlayerNumber = 0;
+var awayPlayers = ["Betts", "Turner", "Freeman", "Smith", "Muncy", "Gallo", "Thompson", "Talyor", "Bellinger"];
+
+function getBatterName() {
+    if (halfInning == false) {
+        document.getElementById("batterName").innerHTML = awayPlayers[0];
+    }
+    if (halfInning == true) {
+        document.getElementById("batterName").innerHTML = homePlayers[0];
+    }
+}
+
+function changeBatter() {
+    if (halfInning == false) {
+        awayPlayerNumber++;
+        if (awayPlayerNumber == 9) {
+            awayPlayerNumber = 0;
+            document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
+        }
+        else {
+            document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
+        }
+    }
+    if (halfInning == true) {
+        homePlayerNumber++;
+        if (homePlayerNumber == 9) {
+            homePlayerNumber = 0;
+            document.getElementById("batterName").innerHTML = homePlayers[homePlayerNumber];
+        }
+        else {
+            document.getElementById("batterName").innerHTML = homePlayers[homePlayerNumber];
+        }
+    }
+}
+
+function getPitcherName() {
+    if (halfInning == false) {
+        document.getElementById("pitcherName").innerHTML = homePitcher;
+    }
+    if (halfInning == true) {
+        document.getElementById("pitcherName").innerHTML = awayPitcher;
+    }
+}
+
+function getPitchCount() {
+    if (halfInning == false) {
+        homePitchCount++;
+        document.getElementById("pitchCount").innerHTML = homePitchCount;
+    }
+    if (halfInning == true) {
+        awayPitchCount++;
+        document.getElementById("pitchCount").innerHTML = awayPitchCount;
+    }
+}
+
 function switchInning() {
     if (halfInning == false) {
         halfInning = true;
         document.getElementById("inning").innerHTML = inning;
         document.getElementById("halfInning").innerHTML = "Bottom ";
+        document.getElementById("batterName").innerHTML = homePlayers[homePlayerNumber];
         console.log(halfInning);
         console.log(inning);
     } 
@@ -26,7 +89,9 @@ function switchInning() {
         inning++;
         document.getElementById("inning").innerHTML = inning;
         document.getElementById("halfInning").innerHTML = "Top ";
+        document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
     }
+    getPitcherName();
 }
 
 function checkRunners() {
@@ -232,6 +297,7 @@ function walk() {
         runnerFirst = true;
         checkRunners();
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("homeScore").innerHTML = homeScore;
     } 
 }
 
@@ -246,27 +312,34 @@ function resetCounters() {
     document.getElementById("realball").innerHTML = ball;
     document.getElementById("strike").innerHTML = strike;
     document.getElementById("out").innerHTML = out;
-    document.getElementById("pitchCount").innerHTML = pitchCount;
     checkRunners();
+    getPitcherName();
 }
 
 function resetGame() {
     ball = 0;
     strike = 0;
     out = 0;
-    pitchCount = 0;
+    homePitchCount = 0;
+    awayPitchCount = 0;
     runnerFirst = false;
     runnerSecond = false;
     runnerThird = false;
     homeScore = 0;
     awayScore = 0;
+    homePlayerNumber = 0;
+    awayPlayerNumber = 0;
     inning = 1;
     halfInning = false;
     console.log(out, strike, ball);
+    getPitcherName();
+    getBatterName();
+    document.getElementById("batterName").innerHTML = "Pitch to start";
+    document.getElementById("pitcherName").innerHTML = "Pitch to start";
     document.getElementById("realball").innerHTML = ball;
     document.getElementById("strike").innerHTML = strike;
     document.getElementById("out").innerHTML = out;
-    document.getElementById("pitchCount").innerHTML = pitchCount;
+    document.getElementById("pitchCount").innerHTML = 0;
     document.getElementById("halfInning").innerHTML = "Top ";
     document.getElementById("inning").innerHTML = inning;
     document.getElementById("awayScore").innerHTML = awayScore;
@@ -287,6 +360,7 @@ function pitchaction(pitchType) {
             document.getElementById("realball").innerHTML = ball;
             document.getElementById("strike").innerHTML = strike;
             walk();
+            changeBatter();
         }
     }
     
@@ -315,10 +389,12 @@ function pitchaction(pitchType) {
             document.getElementById("realball").innerHTML = ball;
             document.getElementById("strike").innerHTML = strike;
             document.getElementById("out").innerHTML = out;
+            changeBatter();
 
             if (out == 3) {
-                resetCounters()
-                switchInning()
+                resetCounters();
+                switchInning();
+                //changeBatter();
             }
         }
     }
@@ -339,14 +415,15 @@ function pitchaction(pitchType) {
         strike = 0;
         document.getElementById("realball").innerHTML = ball;
         document.getElementById("strike").innerHTML = strike;
+        changeBatter();
 
         if (selectRandomContact == "out") {
             out++;
             document.getElementById("out").innerHTML = out;
 
             if (out == 3) {
-                resetCounters()
-                switchInning()
+                resetCounters();
+                switchInning();
             }
         }
         else if (selectRandomContact == "homerun") {
@@ -377,14 +454,15 @@ function pitchaction(pitchType) {
         strike = 0;
         document.getElementById("realball").innerHTML = ball;
         document.getElementById("strike").innerHTML = strike;
+        changeBatter();
 
         if (selectRandomContact == "out") {
             out++;
             document.getElementById("out").innerHTML = out;
 
             if (out == 3) {
-                resetCounters()
-                switchInning()
+                resetCounters();
+                switchInning();
             }
         }
         else if (selectRandomContact == "homerun") {
@@ -423,8 +501,12 @@ function pitch() {
 
     pitchaction(selectRandomAction);
 
-    pitchCount++;
-    document.getElementById("pitchCount").innerHTML = pitchCount;
+    //if (homePitchCount == 0) {
+        //document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
+    //}
+
+    getPitchCount();
+    getPitcherName();
  }
 
  function autoSim() {
@@ -446,7 +528,6 @@ function pitch() {
 
         pitchaction(selectRandomAction);
 
-        pitchCount++;
-        document.getElementById("pitchCount").innerHTML = pitchCount;
+        getPitchCount();
     }
  }
