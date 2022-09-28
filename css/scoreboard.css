@@ -102,7 +102,13 @@
 }
 
 .trans-count {
-    transform: translateX(-40px);
+    position: absolute;
+    transform: translate(50px, -25px);
+}
+
+.trans-outs {
+    position: absolute;
+    transform: translate(-10px, -25px);
 }
 
 .firstbase {
@@ -132,7 +138,7 @@
 .inning {
     text-align: center;
     position: absolute;
-    transform: translate(361px, -25px);
+    transform: translate(356px, -25px);
     font-size: 20px;
-    width: 75px;
+    width: 90px;
 }
