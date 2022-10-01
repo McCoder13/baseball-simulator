@@ -253,4 +253,30 @@ tr:nth-child(odd) {
     .field {
       display: none;
     }
+    
+    .navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        text-align: center;
+        transition: all .2s;
+    }
+    
+    .navbar a{
+        text-decoration: none;
+        color: #d4d4d4;
+        padding: 10px;
+    }
+
+    .team-container {
+        margin-top: 40px;
+        margin-left: 0px;
+        width: 390px;
+        height: 700px;
+        background: #333333;
+        border-radius: 5px;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    }
   }
