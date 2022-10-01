@@ -248,3 +248,9 @@ tr:nth-child(odd) {
         transform: translate(15px, 380px);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .field {
+      display: none;
+    }
+  }

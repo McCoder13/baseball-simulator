@@ -1,0 +1,20 @@
+var chipper = {
+    firstName: 'Chipper',
+    hits: 10,
+    atBats: 30,
+    calcAVG: function() {
+        this.avg = this.hits / this.atBats;
+        return this.avg;
+    }
+}
+ 
+chipper.calcAVG();
+console.log(chipper.firstName + ' has a batting average of ' + chipper.avg);
+
+
+function ParseFloat(str,val) {
+    str = str.toString();
+    str = str.slice(0, (str.indexOf(".")) + val + 1); 
+    return Number(str);   
+}
+console.log(ParseFloat("10.547892",2))

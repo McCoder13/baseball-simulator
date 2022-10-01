@@ -205,6 +205,7 @@ function playerAddStatH() {
             case 0:
                 awayBatterH0++;
                 document.getElementById("away0H").innerHTML = awayBatterH0;
+                //let awayBatterAVG0 = awayBatterH0
                 break;
             case 1:
                 awayBatterH1++;
