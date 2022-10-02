@@ -463,7 +463,7 @@ tr:nth-child(odd) {
     }
     
     .reset-button {
-        transform: translate(4px, 297px);
+        transform: translate(4px, 290px);
         border: none;
         padding: 20px;
         background: #252526;
