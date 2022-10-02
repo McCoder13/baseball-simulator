@@ -378,4 +378,51 @@ tr:nth-child(odd) {
         float: right;
         transform: translate(-30px, 0);
     }
+
+    .mobile-bases {
+        transform: translate(-330px, 370px);
+    }
+
+    .mobile-firstbase {
+        transform: translate(405px, -45px) rotate(45deg);
+    }
+    
+    .mobile-secondbase {
+        transform: translate(390px, -60px) rotate(45deg);
+    }
+    
+    .mobile-thirdbase {
+        transform: translate(375px, -45px) rotate(45deg);
+    }
+    
+    .mobile-score-base {
+        position: absolute;
+        background: #fff;
+        width: 16px;
+        height: 16px;
+    }
+    
+    .mobile-onbase {
+        background: #ffff00;
+        box-shadow: 0px 10px 63px 11px #ffff00f7;
+    }
+
+    .mobile-quick-game-stats {
+        background: #252526;
+        width: 370px;
+        height: 70px;
+        transform: translate(10px, 361px);
+        display: inline-block;
+        font-size: 20px;
+        text-shadow: rgba(212,212,212,0.95) 0px 0px 38px;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .mobile-trans-count {
+        transform: translate(140px, 22px);
+    }
+    
+    .mobile-trans-outs {
+        transform: translate(240px, -3px);
+    }
   }
