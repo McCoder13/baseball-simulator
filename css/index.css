@@ -265,6 +265,7 @@ tr:nth-child(odd) {
     }
     
     .navbar a{
+        font-size: 16px;
         text-decoration: none;
         color: #d4d4d4;
         padding: 10px;
@@ -272,11 +273,109 @@ tr:nth-child(odd) {
 
     .team-container {
         margin-top: 40px;
-        margin-left: 0px;
+        margin-left: 0;
+        margin-bottom: 0;
         width: 390px;
-        height: 700px;
+        height: 1000px;
         background: #333333;
         border-radius: 5px;
         box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-scoreboard {
+        
+    }
+
+    .mobile-awayteam-container {
+        transform: translate(0px, 380px);
+        box-shadow: 0px 10px 63px 21px rgba(0,91,156,0.89);
+        background: #005A9C;
+        width: 43%;
+        padding: 8px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 8px;
+        border-radius: 5px;
+    }
+
+    .mobile-awayteam {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .mobile-awayscore {
+        text-shadow: rgba(212,212,212,0.95) 0px 0px 10px;
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .mobile-hometeam-container {
+        transform: translate(190px, 334px);
+        box-shadow: 0px 10px 40px 21px rgba(0,92,92,0.89);
+        /*opacity: .1;*/
+        background: #005c5c;
+        width: 43%;
+        padding: 8px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 8px;
+        border-radius: 5px;
+    }
+
+    .mobile-hometeam {
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .mobile-homescore {
+        text-shadow: rgba(212,212,212,0.95) 0px 0px 10px;
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .mobile-statline {
+        transform: translate(-10px, 364px);
+        width: 100%;
+        background: #333333;
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 300;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    #mobile-pitcherName {
+        font-weight: 700;
+    }
+    
+    .mobile-pitches {
+        font-size: 11px;
+    }
+    
+    #mobile-batterName {
+        font-weight: 700;
+    }
+    
+    .mobile-pitcher-stats {
+        display: inline-block;
+        margin: 10px;
+        width: 100%;
+    }
+    
+    .mobile-pitch-stats {
+        float: right;
+        transform: translate(-30px, 0);
+    }
+    
+    .mobile-batter-stats {
+        margin: 10px;
+        display: inline-block;
+        width: 100%;
+    }
+    
+    .mobile-batter-count {
+        float: right;
+        transform: translate(-30px, 0);
     }
   }

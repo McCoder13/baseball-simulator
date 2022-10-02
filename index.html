@@ -283,6 +283,33 @@
                     </tbody>
                 </table>
             </div>
+            <div class="mobile-scoreboard">
+                <div class="mobile-statline">
+                    <div class="mobile-pitcher-stats">
+                        <span id="mobile-pitcherName">Pitch to start</span>
+                        <span class="mobile-pitch-stats">
+                            <span id="mobile-pitchCount">0</span>
+                            <span class="mobile-pitches">Pitches</span>
+                        </span>
+                    </div>
+                    <div class="mobile-batter-stats">
+                        <span id="mobile-batterName">Pitch to start</span>
+                        <span class="mobile-batter-count">
+                            <span id="mobile-batterHits">0</span>
+                            <span class="mobile-pitches">For</span>
+                            <span id="mobile-batterAB">0</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="mobile-awayteam-container">
+                    <span class="mobile-awayteam">LAD </span>
+                    <span class="mobile-awayscore" id="mobile-awayScore">0</span>
+                </div>
+                <div class="mobile-hometeam-container">
+                    <span class="mobile-hometeam">SEA </span>
+                    <span class="mobile-homescore" id="mobile-homeScore">0</span>
+                </div>
+            </div>
             <button onclick="autoSim()" class="auto-button">Simulate</button>
             <button onclick="pitch()" class="pitch-button">Pitch</button>
             <button onclick="resetGame()" class="reset-button">Reset Game</button>
