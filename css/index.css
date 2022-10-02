@@ -257,6 +257,7 @@ tr:nth-child(odd) {
     .navbar {
         width: 130%;
         position: fixed;
+        z-index: -1;
         top: 0;
         right: 0;
         margin: 10px;
