@@ -438,7 +438,20 @@ tr:nth-child(odd) {
     }
 
     .auto-button {
-        transform: translate(198px, 422px);
+        transform: translate(198px, 426px);
+        border: none;
+        padding: 20px;
+        background: #252526;
+        bottom: 0;
+        left: 0;
+        color: #d4d4d4;
+        width: 185px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 900;
+        font-family: Source Sans Pro;
+        transition: all .2s ease;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
     }
 
     .pitch-button {
@@ -447,5 +460,18 @@ tr:nth-child(odd) {
     
     .reset-button {
         transform: translate(4px, 297px);
+        border: none;
+        padding: 20px;
+        background: #252526;
+        bottom: 0;
+        left: 0;
+        color: #d4d4d4;
+        width: 185px;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 900;
+        font-family: Source Sans Pro;
+        transition: all .2s ease;
+        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
     }
   }
