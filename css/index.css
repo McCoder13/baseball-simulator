@@ -255,7 +255,7 @@ tr:nth-child(odd) {
     }
     
     .navbar {
-        width: 100%;
+        width: 130%;
         position: fixed;
         top: 0;
         right: 0;
@@ -335,7 +335,7 @@ tr:nth-child(odd) {
 
     .mobile-statline {
         transform: translate(-10px, 364px);
-        width: 100%;
+        width: 390px;
         background: #333333;
         color: white;
         border-radius: 5px;
