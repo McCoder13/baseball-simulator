@@ -454,7 +454,7 @@ tr:nth-child(odd) {
 
     .mobile-pitch-button {
         cursor: pointer;
-        transform: translate(4px, 420px);
+        transform: translate(4px, 283px);
         border: none;
         padding: 20px;
         background: #252526;
