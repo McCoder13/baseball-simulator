@@ -583,9 +583,11 @@ function changeBatter() {
 function getPitcherName() {
     if (halfInning == false) {
         document.getElementById("pitcherName").innerHTML = homePitcher;
+        document.getElementById("mobile-pitcherName").innerHTML = homePitcher;
     }
     if (halfInning == true) {
         document.getElementById("pitcherName").innerHTML = awayPitcher;
+        document.getElementById("mobile-pitcherName").innerHTML = awayPitcher;
     }
 }
 
@@ -593,10 +595,12 @@ function getPitchCount() {
     if (halfInning == false) {
         homePitchCount++;
         document.getElementById("pitchCount").innerHTML = homePitchCount;
+        document.getElementById("mobile-pitchCount").innerHTML = homePitchCount;
     }
     if (halfInning == true) {
         awayPitchCount++;
         document.getElementById("pitchCount").innerHTML = awayPitchCount;
+        document.getElementById("mobile-pitchCount").innerHTML = awayPitchCount;
     }
 }
 
@@ -604,7 +608,9 @@ function switchInning() {
     if (halfInning == false) {
         halfInning = true;
         document.getElementById("halfInning").innerHTML = "Bottom ";
+        document.getElementById("mobile-halfInning").innerHTML = "Bottom ";
         document.getElementById("batterName").innerHTML = homePlayers[homePlayerNumber];
+        document.getElementById("mobile-batterName").innerHTML = homePlayers[homePlayerNumber];
         console.log(halfInning);
         console.log(inning);
     } 
@@ -612,8 +618,11 @@ function switchInning() {
         halfInning = false;
         inning++;
         document.getElementById("inning").innerHTML = inning;
+        document.getElementById("mobile-inning").innerHTML = inning;
         document.getElementById("halfInning").innerHTML = "Top ";
+        document.getElementById("mobile-halfInning").innerHTML = "Top ";
         document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
+        document.getElementById("mobile-batterName").innerHTML = awayPlayers[awayPlayerNumber];
     }
     getPitcherName();
 }
@@ -622,27 +631,33 @@ function checkRunners() {
     if (runnerFirst == true) {
         document.getElementById("firstBase").classList.add("onbase");
         document.getElementById("scoreboardFirst").classList.add("onbase");
+        document.getElementById("mobile-scoreboardFirst").classList.add("mobile-onbase");
     }
     if (runnerSecond == true) {
         document.getElementById("secondBase").classList.add("onbase");
         document.getElementById("scoreboardSecond").classList.add("onbase");
+        document.getElementById("mobile-scoreboardSecond").classList.add("mobile-onbase");
     }
     if (runnerThird == true) {
         document.getElementById("thirdBase").classList.add("onbase");
         document.getElementById("scoreboardThird").classList.add("onbase");
+        document.getElementById("mobile-scoreboardThird").classList.add("mobile-onbase");
     }
 
     if (runnerFirst == false) {
         document.getElementById("firstBase").classList.remove("onbase");
         document.getElementById("scoreboardFirst").classList.remove("onbase");
+        document.getElementById("mobile-scoreboardFirst").classList.remove("mobile-onbase");
     }
     if (runnerSecond == false) {
         document.getElementById("secondBase").classList.remove("onbase");
         document.getElementById("scoreboardSecond").classList.remove("onbase");
+        document.getElementById("mobile-scoreboardSecond").classList.remove("mobile-onbase");
     }
     if (runnerThird == false) {
         document.getElementById("thirdBase").classList.remove("onbase");
         document.getElementById("scoreboardThird").classList.remove("onbase");
+        document.getElementById("mobile-scoreboardThird").classList.remove("mobile-onbase");
     }
 }
 
@@ -666,6 +681,7 @@ function homerun() {
             runnerThird = false;
         }
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("mobile-awayScore").innerHTML = awayScore;
         checkRunners();
     } 
 
@@ -688,6 +704,7 @@ function homerun() {
             runnerThird = false;
         }
         document.getElementById("homeScore").innerHTML = homeScore;
+        document.getElementById("mobile-homeScore").innerHTML = homeScore;
         checkRunners();
     } 
 }
@@ -711,6 +728,7 @@ function triple() {
         runnerThird = true;
         checkRunners();
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("mobile-awayScore").innerHTML = awayScore;
     } 
 
     if (halfInning == true) {
@@ -731,6 +749,7 @@ function triple() {
         runnerThird = true;
         checkRunners();
         document.getElementById("homeScore").innerHTML = homeScore;
+        document.getElementById("mobile-homeScore").innerHTML = homeScore;
     } 
 }
 
@@ -752,6 +771,7 @@ function double() {
         runnerSecond = true;
         checkRunners();
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("mobile-awayScore").innerHTML = awayScore;
     } 
 
     else if (halfInning == true) {
@@ -771,6 +791,7 @@ function double() {
         runnerSecond = true;
         checkRunners();
         document.getElementById("homeScore").innerHTML = homeScore;
+        document.getElementById("mobile-homeScore").innerHTML = homeScore;
     } 
 }
 
@@ -791,6 +812,7 @@ function single() {
         runnerFirst = true;
         checkRunners();
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("mobile-awayScore").innerHTML = awayScore;
     } 
 
     else if (halfInning == true) {
@@ -809,6 +831,7 @@ function single() {
         runnerFirst = true;
         checkRunners();
         document.getElementById("homeScore").innerHTML = homeScore;
+        document.getElementById("mobile-homeScore").innerHTML = homeScore;
     } 
 }
 
@@ -827,6 +850,7 @@ function walk() {
         runnerFirst = true;
         checkRunners();
         document.getElementById("awayScore").innerHTML = awayScore;
+        document.getElementById("mobile-awayScore").innerHTML = awayScore;
     } 
 
     else if (halfInning == true) {    
@@ -842,8 +866,8 @@ function walk() {
         }
         runnerFirst = true;
         checkRunners();
-        document.getElementById("awayScore").innerHTML = awayScore;
         document.getElementById("homeScore").innerHTML = homeScore;
+        document.getElementById("mobile-homeScore").innerHTML = homeScore;
     } 
 }
 
@@ -1041,13 +1065,16 @@ function pitchaction(pitchType) {
         ball++;
         console.log(pitchType, ball);
         document.getElementById("realball").innerHTML = ball;
+        document.getElementById("mobile-realball").innerHTML = ball;
 
         if (ball == 4) {
             ball = 0;
             strike = 0;
             console.log(pitchType, ball);
             document.getElementById("realball").innerHTML = ball;
+            document.getElementById("mobile-realball").innerHTML = ball;
             document.getElementById("strike").innerHTML = strike;
+            document.getElementById("mobile-strike").innerHTML = strike;
             walk();
             playerAddStatBB();
             playerAddStatPA();
@@ -1063,6 +1090,7 @@ function pitchaction(pitchType) {
             strike++;
             console.log(pitchType, strike);
             document.getElementById("strike").innerHTML = strike;
+            document.getElementById("mobile-strike").innerHTML = strike;
         }
     }
     
@@ -1070,6 +1098,7 @@ function pitchaction(pitchType) {
         strike++;
         console.log(pitchType, strike);
         document.getElementById("strike").innerHTML = strike;
+        document.getElementById("mobile-strike").innerHTML = strike;
         
         if (strike == 3) {
             out++;
@@ -1077,8 +1106,11 @@ function pitchaction(pitchType) {
             strike = 0;
             ball = 0;
             document.getElementById("realball").innerHTML = ball;
+            document.getElementById("mobile-realball").innerHTML = ball;
             document.getElementById("strike").innerHTML = strike;
+            document.getElementById("mobile-strike").innerHTML = strike;
             document.getElementById("out").innerHTML = out;
+            document.getElementById("mobile-out").innerHTML = out;
             playerAddStatAB();
             playerAddStatSO();
             playerAddStatPA();
@@ -1098,13 +1130,14 @@ function pitchaction(pitchType) {
 
         let selectRandomContact = randomContact[Math.floor(Math.random() * randomContact.length)];
 
-        setTimeout(function(){alert(selectRandomContact); }, 801);
+        setTimeout(function(){alert(selectRandomContact); }, 001);
 
         console.log(selectRandomContact);
 
         if (selectRandomContact == "out") {
             out++;
             document.getElementById("out").innerHTML = out;
+            document.getElementById("mobile-out").innerHTML = out;
 
             if (out == 3) {
                 resetCounters();
@@ -1131,7 +1164,9 @@ function pitchaction(pitchType) {
         ball = 0;
         strike = 0;
         document.getElementById("realball").innerHTML = ball;
+        document.getElementById("mobile-realball").innerHTML = ball;
         document.getElementById("strike").innerHTML = strike;
+        document.getElementById("mobile-strike").innerHTML = strike;
         playerAddStatAB();
         playerAddStatPA();
     }
@@ -1149,6 +1184,7 @@ function pitchaction(pitchType) {
         if (selectRandomContact == "out") {
             out++;
             document.getElementById("out").innerHTML = out;
+            document.getElementById("mobile-out").innerHTML = out;
 
             if (out == 3) {
                 resetCounters();
@@ -1175,7 +1211,9 @@ function pitchaction(pitchType) {
         ball = 0;
         strike = 0;
         document.getElementById("realball").innerHTML = ball;
+        document.getElementById("mobile-realball").innerHTML = ball;
         document.getElementById("strike").innerHTML = strike;
+        document.getElementById("mobile-strike").innerHTML = strike;
         playerAddStatAB();
         playerAddStatPA();
     }
@@ -1205,6 +1243,27 @@ function pitch() {
     // Display leadoff batter name
     if (homePitchCount == 0) {
         document.getElementById("batterName").innerHTML = awayPlayers[awayPlayerNumber];
+    }
+
+    getPitchCount();
+    getPitcherName();
+    switchTabs();
+ }
+
+function mobilePitch() {
+    checkRunners();
+
+    let randomAction = ["ball", "strike", "contact", "foulball", "ball"]
+
+    let selectRandomAction = randomAction[Math.floor(Math.random() * randomAction.length)];
+
+    alert(selectRandomAction);
+
+    pitchaction(selectRandomAction);
+
+    // Display leadoff batter name
+    if (homePitchCount == 0) {
+        document.getElementById("mobile-batterName").innerHTML = awayPlayers[awayPlayerNumber];
     }
 
     getPitchCount();
