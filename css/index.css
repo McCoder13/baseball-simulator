@@ -253,9 +253,16 @@ tr:nth-child(odd) {
     .mobile-scoreboard {
         display: none;
     }
+    .mobile-pitch-button {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    .pitch-button {
+        display: none;
+    }
+
     body {
         height: 1000px;
         width: 390px;
@@ -443,39 +450,28 @@ tr:nth-child(odd) {
 
     .auto-button {
         transform: translate(198px, 426px);
+    }
+
+    .mobile-pitch-button {
+        cursor: pointer;
+        transform: translate(4px, 420px);
         border: none;
         padding: 20px;
         background: #252526;
         bottom: 0;
         left: 0;
         color: #d4d4d4;
-        width: 185px;
+        width: 380px;
         border-radius: 5px;
         font-size: 18px;
         font-weight: 900;
         font-family: Source Sans Pro;
         transition: all .2s ease;
         box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .pitch-button {
-        transform: translate(4px, 283px);
     }
     
     .reset-button {
+        /* Y transform value set there on purpose because alignment issues on phones are no apparent with that value */
         transform: translate(4px, 293px);
-        border: none;
-        padding: 20px;
-        background: #252526;
-        bottom: 0;
-        left: 0;
-        color: #d4d4d4;
-        width: 185px;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: 900;
-        font-family: Source Sans Pro;
-        transition: all .2s ease;
-        box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.5);
     }
   }
