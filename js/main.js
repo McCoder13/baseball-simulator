@@ -1123,7 +1123,7 @@ function pitchaction(pitchType) {
     }
 
     else if (pitchType == "contact") {
-        let randomContact = ["bunt", "out", "out", "out", "out", "single", "single", "single", "out", "out", "double", "double", "out", "out", "homerun", "homerun", "out", "out", "triple"]
+        let randomContact = ["out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "out", "single", "single", "single", "single", "double", "double","double","double", "homerun", "homerun", "homerun", "triple"]
 
         //let testContact = ["single"]
         //let selectRandomContact = testContact[Math.floor(Math.random() * testContact.length)];
